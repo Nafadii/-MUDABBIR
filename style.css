@@ -1037,7 +1037,8 @@ nav a:hover {
   margin-bottom: 6px;
 }
 
-/* ================= (Responsive) ================= */
+/* ================= التجاوب والموبايل (Responsive Design) ================= */
+
 @media (max-width: 1200px) {
   .main-dashboard-grid,
   .split-bottom-row {
@@ -1053,14 +1054,52 @@ nav a:hover {
 }
 
 @media (max-width: 768px) {
-  .stats-row {
+  .container {
     flex-direction: column;
   }
+
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+    border-left: none;
+    border-bottom: 1px solid #e5e7eb;
+    padding: 15px;
+  }
+
+  .content {
+    padding: 15px;
+  }
+
   .topbar {
     flex-direction: column;
     gap: 15px;
   }
+
+  .topbar-left {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .stats-row {
+    flex-direction: column;
+  }
+
+  .transactions-wrapper {
+    width: 100%;
+    overflow-x: auto;
+  }
   .transactions-table {
     min-width: 600px;
+  }
+
+  .css-chart {
+    height: 140px;
+  }
+}
+
+@media (max-width: 480px) {
+  .bills-grid {
+    grid-template-columns: 1fr;
   }
 }
